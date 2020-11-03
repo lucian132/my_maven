@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.qf</groupId>
+    <artifactId>my_maven_s</artifactId>
+    <version>1.0-RELEASE</version>
+
+        <!-- 设置项目类型-->
+    <packaging>war</packaging>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <!-- 导入JSP 和 Servlet 和 JSTL 依赖 -->
+    <dependencies>
+
+        <dependency>
+            <!-- jstl 支持 -->
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.2</version>
+        </dependency>
+        <dependency>
+            <!-- servlet编译环境 -->
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.1.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <!-- jsp编译环境 -->
+            <groupId>javax.servlet</groupId>
+            <artifactId>jsp-api</artifactId>
+            <version>2.0</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.qf.ww</groupId>
+            <artifactId>mo</artifactId>
+            <version>1.0</version>
+        </dependency>
+
+        </dependencies>
+    <distributionManagement>
+        <repository>
+            <id>nexus-public</id> <!-- nexus认证id -->
+            <url>http://localhost:8081/nexus/content/repositories/releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexus-public</id> <!-- nexus认证id -->
+            <url>http://localhost:8081/nexus/content/repositories/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+</project>
